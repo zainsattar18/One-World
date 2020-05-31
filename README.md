@@ -4,12 +4,28 @@ Title: One World
 
 #2:
 
-Description. 
-I am creating an React app that allows the user to retrieve relevant information about a certain country of their choosing. The main homepage will have the Seven Continents. After clicked it will send the user to 2nd page which displays the sub-region and allow the user to eventually traverse to endpoint which displays several different data points of a certain country (Name, Latitude & Longitude, Native Language, Currency & Flag).
+Description:
+
+I am creating a React app that allows the user to retrieve relevant information about a certain country of their choosing. The main homepage will have the Seven Continents. After clicked it will send the user to 2nd page which displays the sub-region and allow the user to eventually traverse to endpoint which displays several different datapoints of a country (Name, Latitude & Longitude, etc).
 
 #3:
 
-https://wireframe.cc/pro/edit/347085
+Desktop:
+
+https://wireframe.cc/pro/pp/5fdd0f549347085
+
+
+Tablet:
+
+https://wireframe.cc/pro/pp/23854e3c4347256
+
+
+
+Mobile:
+
+https://wireframe.cc/pro/pp/da2767ce7347254
+
+
 
 #4:
 
@@ -81,7 +97,7 @@ http://countryapi.gear.host/v1/Country/getCountries
 -Grab data from an external API.
 -Clickable interface that allows the user to access other pages. 
 -Display country information (ex: Name, Latitude & Longitude, Flag etc)
--Link on all pages that allows user to click link and transfer them back to the "Home Page"
+-Link on all pages that allows user to click on a "Home" button and transfer them back to the "Home Page"
 ```
 
 7: Post-MVP
