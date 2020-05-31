@@ -59,6 +59,20 @@ Component Heirarchy:
         -Footer        
 ```
 
+#### Component Breakdown
+
+
+
+|  Component   |    Type    | State | Props | Description                                                      |
+| :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
+|    Header    | functional |   n   |   n   |   contain link to homepage                   |
+|     Body     |   class    |   y   |   n   |   provide links to the child components                          |
+|   Continent  | functional |   n   |   y   |   will render all the continents for user to click               |
+|   Subregion  | functional |   n   |   y   |   will the subregion of in the clicked continent                 |
+|   Countries  | functional |   n   |   y   |   will render all the countries in the clicked subregion         |
+|   Country    | functional |   n   |   y   |   render information of the clicked continent                    |
+|    Footer    | functional |   n   |   n   |   will link to personal account                                  |
+
 
 #5
 
@@ -108,4 +122,29 @@ http://countryapi.gear.host/v1/Country/getCountries
 -Apply testing using Jest to App. 
 ```
 8: SWOT Analysis
+
 https://www.docdroid.net/JvMKKiY/swot-project-2-pdf
+
+9:
+
+
+|     Library      | Description                                        |
+| :--------------: | :--------------------------------------------------|
+|   React Router   | Connect and keep UI in sync with URL 
+|    Storybook     | Develop components in isolation for use in project |
+|     Axios        | Help us make requests to external resources        |
+
+10:
+| Component | Priority | Estimated Time | Time Invested | 
+| --- | :---: |  :---: | :---: |  
+| Psuedocode| M | 2hrs|  |  
+| Create Parent component| H | 3hrs  | |
+| Create Child components | H | 4.5hrs|  |  
+| Data from API | H | 2hrs|  | 
+| CSS - Basic | M | 3hrs| | 
+| FlexBox| H | 4hrs|  |  
+| CSS - Advanced | H | 3 hrs |  |   
+| Work with Storybook  | H | 4.5hrs|  |  
+| Proper utilization of React-Router| H | 3.5hrs|  | 
+| --- | --- |  --- | --- |
+| Total | H |29.5hrs|  |  
