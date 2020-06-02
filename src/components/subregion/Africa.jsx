@@ -6,13 +6,10 @@ import Countries from "../countries/Countries"
 function Africa(props) {
   const westAfrica = props.data && props.data.filter(region => region.SubRegion === "Western Africa")
   // const eastAfrica = props.subregion && props.subregion.filter(region => region.SubRegion === "Eastern Africa")
-  // const northAfrica = props.subregion && props.subregion.filter(region => region.SubRegion === "Northern Africa")
-  // const midAfrica = props.subregion && props.subregion.filter(region => region.SubRegion === "Middle Africa")
-  // const southAfrica = props.subregion && props.subregion.filter(region => region.SubRegion === "Southern Africa")
-  const display = westAfrica.map(info => info.Name)
+  // const display = westAfrica.map(info => info.Name)
 
-  console.log(westAfrica)
-  console.log(display)
+  // console.log(westAfrica)
+  // console.log(display)
 
   // console.log(eastAfrica)
   // console.log(northAfrica)
@@ -27,36 +24,34 @@ function Africa(props) {
       <div className="africa">
         <h1>Africa</h1>
       </div>
-        {props.data.map(country =>
-      <div className="afr">
-          
+      
+      
         
+        <div className="afr">
+          
+          <Link to={`/Africa/EasternAfrica`}>
           <div>Eastern Africa</div>
-        
-           
-          <div>Middle Africa</div>
-          
-          <div>Northern Africa</div>
-
-          <div>Southern Africa</div>
-        
-          <Link to={`/continent/${country.SubRegion}`}>
-            <div>Western Africa</div>
-            {/* <WesternAfrica
-          data = {props.westAfrica}         
-          /> */}
-            <Countries data={display} />
-
           </Link>
-          
-
-        {/* {props.westAfrica.map(data =>
-          <h4>{data.Name}</h4>
-          )} */}
         
+          <Link to={`/Africa/MiddleAfrica`}>
+          <div>Middle Africa</div>
+          </Link>
+        
+          <Link to={`/Africa/NorthernAfrica`}>
+          <div>Northern Africa</div>
+          </Link>
+        
+          <Link to={`/Africa/SouthernAfrica`}>
+          <div>Southern Africa</div>
+          </Link>
+        
+          <Link to={`/Africa/WesternAfrica`}>
+          <div>Western Africa</div>    
+          </Link>
+                 
         
       </div>
-        )}
+        
     </div>
   )
 }

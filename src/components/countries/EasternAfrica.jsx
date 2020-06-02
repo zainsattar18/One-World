@@ -11,7 +11,7 @@ class WesternAfrica extends Component {
   }
 
   async componentDidMount() {
-    const country = await axios("https://cors-anywhere.herokuapp.com/http://countryapi.gear.host/v1/Country/getCountries?pRegion=Africa&pSubRegion=Western%20Africa")
+    const country = await axios("https://cors-anywhere.herokuapp.com/http://countryapi.gear.host/v1/Country/getCountries?pRegion=Africa&pSubRegion=Eastern%20Africa")
     console.log(country)
     
     this.setState({

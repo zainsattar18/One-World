@@ -14,6 +14,7 @@ import Countries from "../countries/Countries"
 import WesternAfrica from "../countries/WesternAfrica"
 
 import {Route, Link} from "react-router-dom"
+import EasternAfrica from '../countries/EasternAfrica'
 
 export default class homepage extends Component {
   constructor() {
@@ -74,19 +75,23 @@ export default class homepage extends Component {
           <SouthAmerica subregion={this.state.country}/>
           </Route>
 
-          
+          <Route path="/Africa/WesternAfrica">
+          <WesternAfrica />
+          </Route>
 
-            <Route path="continent/:SubRegion">
-            <Countries data={this.state.country} />
-            </Route>
+          <Route path="/Africa/EasternAfrica">
+          <EasternAfrica />
+          </Route>
+
+            {/* <Route path="continent/:SubRegion">
+            <Countries data={this.state.Name} />
+            </Route> */}
 
           {/* <Route path="country/:Name">
           <Country data={this.state.country} />
           </Route> */}
+
           
-          {/* <Route path="/Africa/WesternAfrica">
-          <WesternAfrica data = {this.state.country}/>
-          </Route> */}
          
         </div>
 
