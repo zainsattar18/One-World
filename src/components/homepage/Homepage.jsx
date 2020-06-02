@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
 import axios from "axios"
 import Continents from '../continents/Continents'
-import Subregion from "../subregion/Subregion"
-
+import Country from "../country/Country"
+// import Subregion from "../subregion/Subregion"
+import Africa from "../subregion/Africa"
+import Asia from "../subregion/Asia"
+import Polar from "../subregion/Polar"
+import NorthAmerica from "../subregion/NorthAmerica"
+import SouthAmerica from "../subregion/SouthAmerica"
+import Oceania from "../subregion/Oceania"
+import Europe from "../subregion/Europe"
 import Countries from "../countries/Countries"
+import WesternAfrica from "../countries/WesternAfrica"
+
 import {Route, Link} from "react-router-dom"
 
 export default class homepage extends Component {
@@ -18,8 +27,6 @@ export default class homepage extends Component {
   async componentDidMount() {
     const country = await axios("https://cors-anywhere.herokuapp.com/http://countryapi.gear.host/v1/Country/getCountries?")
     console.log(country)
-    // const worldBank = await axios("https://cors-anywhere.herokuapp.com/https://api.worldbank.org/v2/country/us?format=json")
-    // console.log(worldBank) 
     
     this.setState({
       country: country.data.Response
@@ -34,27 +41,52 @@ export default class homepage extends Component {
       <div>
 
         <Route path= "/" exact> 
-        <div>
-          <Continents
-            continent={this.state.country}
-            />
-          </div>
-        </Route> 
-        {/* home page */}
+          <Continents continent={this.state.country}/>
+          </Route> 
+        
 
           <div>  
-          <Route path="/country/:SubRegion" exact>
-          <Subregion
-            subregion ={this.state.country}
-          />
+          <Route path="/Africa" exact>
+            <Africa data={this.state.country}/>
           </Route>
-          {/* second page */}
 
-          <Route path="/country/:Name">
-            <Countries
-              country =  {this.state.country}
-              />
+          <Route path ="/Antarctica" >
+          <Polar />
           </Route>
+
+          <Route path ="/Asia">
+          <Asia />
+          </Route>
+
+          <Route path= "/Oceania">
+          <Oceania subregion={this.state.country}/>
+          </Route>
+
+          <Route path= "/Europe">
+          <Europe subregion={this.state.country}/>
+          </Route>
+
+          <Route path= "/NorthAmerica">
+          <NorthAmerica subregion={this.state.country}/>
+          </Route>
+
+          <Route path= "/SouthAmerica">
+          <SouthAmerica subregion={this.state.country}/>
+          </Route>
+
+          
+
+            <Route path="continent/:SubRegion">
+            <Countries data={this.state.country} />
+            </Route>
+
+          {/* <Route path="country/:Name">
+          <Country data={this.state.country} />
+          </Route> */}
+          
+          {/* <Route path="/Africa/WesternAfrica">
+          <WesternAfrica data = {this.state.country}/>
+          </Route> */}
          
         </div>
 
