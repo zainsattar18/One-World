@@ -1,14 +1,17 @@
 import React from 'react'
-import { withRouter } from 'react-router'
+import { withRouter, Link } from 'react-router-dom'
 
-function Polar(props) {
-
-  // const cont = props.subregion.find(area => area.SubRegion === props.match.params.SubRegion)
+function Polar() {
 
   return (
     <div>
-      <h3>Antarctica</h3>
+      <div className="polar">
+        <h1>Polar</h1>
+      </div>
+      <Link to={`/Polar/Antarctica`}>
+        <div>Antarctica</div>
+      </Link>
     </div>
   )
 }
-export default withRouter (Polar)
+export default withRouter(Polar)

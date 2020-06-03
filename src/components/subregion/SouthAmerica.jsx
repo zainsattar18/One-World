@@ -1,19 +1,24 @@
 import React from 'react'
-import { withRouter } from 'react-router'
+import { withRouter, Link } from 'react-router-dom'
 
 function SouthAmerica() {
   return (
     <div>
-      
+
       <div className="southAmerica">
         <h1>South America</h1>
       </div>
+
       <div className="south">
-        <div>Central America</div>
-        <div>South America</div>
+        <Link to={`/SouthAmerica/CentralAmerica`}>
+          <div>Central America</div>
+        </Link>
+        <Link to={`SouthAmerica/SouthAmerica`}>
+          <div>South America</div>
+        </Link>
       </div>
 
     </div>
   )
 }
-export default withRouter (SouthAmerica)
+export default withRouter(SouthAmerica)

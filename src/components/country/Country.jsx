@@ -1,23 +1,26 @@
 import React from 'react'
 import { withRouter } from 'react-router-dom'
 
-
 function Country(props) {
-
-  // const country = props.data.find(info => info.Name === props.match.params.Name)
-  // console.log(data)
-  
+  // console.log(props.data)
+  const info = props.data.find((country) => country.Name === props.match.params.Name )
+  // console.log(info)
 
   return (
-    <div>
-      {/* <Route path="/Africa/WesternAfrica/:Name"></Route> */}
-      <h4>
-        {/* {country.Name} */}
-      </h4>
-
+      <div>
+      {info &&<div key={info.Name}>
+        
+        <div className="flag"><img src={info.FlagPng} alt={info.Name}width="300px"/ ></div>
+        <div className="name">Country: {info.Name}</div>
+        <div className="currency">Currency: {info.CurrencyName}</div>
+        <div className="symbol">Currency Symbol: {info.CurrencySymbol}</div>
+        <div className="lat">Latitude: {info.Latitude} </div> 
+        <div className="long">Longitude: {info.Longitude}</div>
+                    
+        
+      </div>}
       
     </div>
   )
-}
-
+  }
 export default withRouter (Country)

@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import axios from "axios"
 import Continents from '../continents/Continents'
 import Country from "../country/Country"
-// import Subregion from "../subregion/Subregion"
 import Africa from "../subregion/Africa"
 import Asia from "../subregion/Asia"
 import Polar from "../subregion/Polar"
@@ -10,11 +9,16 @@ import NorthAmerica from "../subregion/NorthAmerica"
 import SouthAmerica from "../subregion/SouthAmerica"
 import Oceania from "../subregion/Oceania"
 import Europe from "../subregion/Europe"
-import Countries from "../countries/Countries"
-import WesternAfrica from "../countries/WesternAfrica"
+import AfricanCountries from "../africanCountries/AfricanCountries"
+import AsiaCountries from "../asiaCountries/AsiaCountries"
+import EuropeCountries from "../europeCountries/EuropeCountries"
+import OceaniaCountries from "../oceaniaCountries/OceaniaCountries"
+import NorthAmericaCountries from "../northamericaCountries/NorthAmericaCountries"
+import SouthAmericanCountries from "../southamericanCountries/SouthAmericanCountries"
+import PolarRegion from "../polarRegion/PolarRegion"
 
-import {Route, Link} from "react-router-dom"
-import EasternAfrica from '../countries/EasternAfrica'
+import { Route } from "react-router-dom"
+
 
 export default class homepage extends Component {
   constructor() {
@@ -27,13 +31,11 @@ export default class homepage extends Component {
 
   async componentDidMount() {
     const country = await axios("https://cors-anywhere.herokuapp.com/http://countryapi.gear.host/v1/Country/getCountries?")
-    console.log(country)
-    
+    // console.log(country)
     this.setState({
       country: country.data.Response
-      
-    })
 
+    })
   }
 
 
@@ -41,63 +43,59 @@ export default class homepage extends Component {
     return (
       <div>
 
-        <Route path= "/" exact> 
-          <Continents continent={this.state.country}/>
-          </Route> 
-        
+        <Route path="/" exact>
+          <Continents continent={this.state.country} />
+        </Route>
 
-          <div>  
+
+        <div>
           <Route path="/Africa" exact>
-            <Africa data={this.state.country}/>
+            <Africa data={this.state.country} />
           </Route>
 
-          <Route path ="/Antarctica" >
-          <Polar />
+          <Route path="/Antarctica" exact>
+            <Polar />
           </Route>
 
-          <Route path ="/Asia">
-          <Asia />
+          <Route path="/Asia" exact>
+            <Asia />
           </Route>
 
-          <Route path= "/Oceania">
-          <Oceania subregion={this.state.country}/>
+          <Route path="/Oceania" exact>
+            <Oceania subregion={this.state.country} />
           </Route>
 
-          <Route path= "/Europe">
-          <Europe subregion={this.state.country}/>
+          <Route path="/Europe" exact>
+            <Europe subregion={this.state.country} />
           </Route>
 
-          <Route path= "/NorthAmerica">
-          <NorthAmerica subregion={this.state.country}/>
+          <Route path="/NorthAmerica" exact>
+            <NorthAmerica subregion={this.state.country} />
           </Route>
 
-          <Route path= "/SouthAmerica">
-          <SouthAmerica subregion={this.state.country}/>
+          <Route path="/SouthAmerica" exact>
+            <SouthAmerica subregion={this.state.country} />
           </Route>
 
-          <Route path="/Africa/WesternAfrica">
-          <WesternAfrica />
+          <AfricanCountries />
+          <AsiaCountries />
+          <EuropeCountries />
+          <OceaniaCountries />
+          <NorthAmericaCountries />
+          <SouthAmericanCountries />
+          <PolarRegion />
+
+          <Route path="/country/:Name">
+            <Country data={this.state.country} />
           </Route>
 
-          <Route path="/Africa/EasternAfrica">
-          <EasternAfrica />
-          </Route>
 
-            {/* <Route path="continent/:SubRegion">
-            <Countries data={this.state.Name} />
-            </Route> */}
 
-          {/* <Route path="country/:Name">
-          <Country data={this.state.country} />
-          </Route> */}
-
-          
-         
         </div>
 
-        
-        
-        
+
+
+
       </div>
     )
   }

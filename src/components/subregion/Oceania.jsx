@@ -1,16 +1,24 @@
 import React from 'react'
-import { withRouter } from 'react-router'
+import { withRouter, Link } from 'react-router-dom'
 
 function Oceania() {
   return (
     <div>
-      <div className="oceania"> <h2> Oceania </h2></div>
+      <div className="oceania">
+        <h2> Oceania </h2></div>
       
-      <div>Australia and New Zealand</div>
+    <Link to={`/Oceania/Australia&NewZealand`}>
+      <div>Australia & New Zealand</div>
+      </Link>
+      <Link to={`/Oceania/Melanesia`}>
       <div>Melansia</div>
+      </Link>
+      <Link to={`/Oceania/Micronesia`}>
       <div>Micronesia</div>
+      </Link>
+      <Link to={`/Oceania/Polynesia`}>
       <div>Polynesia</div>
-
+      </Link>
     </div>
   )
 }
