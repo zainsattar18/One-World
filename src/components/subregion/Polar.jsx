@@ -1,16 +1,24 @@
 import React from 'react'
 import { withRouter, Link } from 'react-router-dom'
+import "../css/Subregion.css"
+
 
 function Polar() {
 
   return (
     <div>
-      <div className="polar">
-        <h1>Polar</h1>
+      <div className="subRegion">
+        <h1 className="region">Polar</h1>
       </div>
-      <Link to={`/Polar/Antarctica`}>
-        <div>Antarctica</div>
-      </Link>
+
+      <div className="sub">
+
+        <Link to={`/Polar/Antarctica`}>
+          <button>
+            <div className="name">Antarctica</div>
+          </button>
+        </Link>
+      </div>
     </div>
   )
 }

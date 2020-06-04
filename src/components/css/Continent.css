@@ -1,0 +1,155 @@
+.select{
+  color:rgba(243, 123, 18, 0.963);
+  font-family: "Montaga", sans-serif;
+  font-size: 150%;
+}
+
+.container {
+display:flex;
+/* flex-direction:row; */
+background-color:lightblue;
+flex-wrap:wrap;
+justify-content:space-between;
+}
+
+.toptwo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 3%;
+}
+
+.middletwo{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  padding-top: 5%;
+}
+
+.bottomthree{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 5%;
+  padding-bottom: 10%;
+}
+
+.africa{
+  width:70%;
+  border:2px solid black;
+  margin-left: 15%;
+}
+
+.africa img{
+  width:100%;
+  margin-top:1em;
+}
+
+.nameAfrica{
+  text-align: center;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+
+.antarctica{
+  width:32%;
+  border:2px solid black;
+  margin-left: 30%;
+}
+
+.antarctica img{
+  width:100%;
+  margin-top:1em;
+}
+
+.namePolar{
+  text-align: center;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.asia {
+  width:35%;
+  border:2px solid black;
+  margin-left: 30%;
+}
+
+.asia img{
+  width:100%;
+  margin-top: 1em;
+}
+
+.nameAsia{
+  text-align: center;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.oceania{
+  width: 90%;
+  border:2px solid black;
+  
+}
+
+.oceania img{
+  width: 100%;
+  margin-top: 1em;
+}
+
+.nameOceania{
+  text-align: center;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.europe{
+  width:70%;
+  border:2px solid black;
+  margin-left: 10%;
+}
+
+.europe img{
+  width:100%;
+  margin-top: 1em;
+}
+
+.nameEurope{
+  text-align: center;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.north{
+  width: 80%;
+  border: 2px solid black;
+  margin-left: 10%;
+}
+
+.north img{
+  width: 100%;
+  margin-top: 1em;
+}
+
+.nameNorth{
+  text-align: center;
+  font-size: 95%;
+  font-weight: bold;
+}
+
+.south {
+  width: 67%;
+  border: 2px solid black;
+  margin-left: 15%;
+}
+
+.south img{
+  width: 100%;
+  margin-top: 1ex;
+}
+
+.southName{
+  text-align: center;
+  font-size: 100%;
+  font-weight: bold;
+}
