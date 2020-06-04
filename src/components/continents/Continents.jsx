@@ -40,7 +40,7 @@ export default function Continents() {
           <Link to={`/Oceania`}>
             <div className="oceania">
               <div className="nameOceania">Oceania</div>
-              <img src ="https://lh3.googleusercontent.com/proxy/RoFxQ4cl4Ew_QGP31s7qolXwbZQrSOuDgYyBDkIAZsQ_g8Riyx-aeeGVk-N7vqaBrbbWZ0gt92KV8X7FbDX7OzkLxPR9wr5u5AAVHPox7w" alt="Oceania"/>
+              <img src ="https://lh3.googleusercontent.com/proxy/Hd9lKjhibKTVUaNJAEFTsdTj1Bi1Hb_cY_AXwmn22XTG4D8E308ZFlerIrWxI0orEIrRGQw_yzkZLDNHKhtefBMrysX7IG66W57CtAabrA" alt="Oceania"/>
             </div>
           </Link>
         </div>

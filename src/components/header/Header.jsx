@@ -43,7 +43,7 @@ export default function Header() {
 
       <Word>One World</Word>
 
-      <Link to="/" exact>
+      <Link to="/" >
         <Button>Home </Button>
       </Link>
     </Container>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter, Link } from "react-router-dom"
 import axios from "axios"
+import "../css/Countries.css"
 
 class EasternAsia extends Component {
   constructor() {
@@ -23,13 +24,15 @@ class EasternAsia extends Component {
 
   render() {
     return (
-      <div>
+      <div className="center">
         {this.state.country.map(country =>
-          <Link to={`/country/${country.Name}`}>
-            <div key={country.Name}>
-              <h2>{country.Name}</h2>
+          <Link to={`/country/${country.Name}`} key={country.Name}>
+            <div className="boxName" >
+              <h2 className="country">{country.Name}</h2>
+              <div className="flag">
               <img src={country.FlagPng} alt="Country" width="200px" />
-            </div>
+              </div>
+              </div>
           </Link>
         )}
 

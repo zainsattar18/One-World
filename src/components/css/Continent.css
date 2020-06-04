@@ -1,7 +1,12 @@
 .select{
-  color:rgba(243, 123, 18, 0.963);
+  color:#00677D;
   font-family: "Montaga", sans-serif;
   font-size: 150%;
+  background-color: blanchedalmond;  
+  text-align: center;
+  padding: 25px 0;
+    
+  
 }
 
 .container {

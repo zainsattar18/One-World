@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter, Link } from "react-router-dom"
 import axios from "axios"
+import "../css/Countries.css"
 
 class SouthernEurope extends Component {
   constructor() {
@@ -11,7 +12,7 @@ class SouthernEurope extends Component {
   }
   async componentDidMount() {
     const country = await axios("https://cors-anywhere.herokuapp.com/http://countryapi.gear.host/v1/Country/getCountries?pRegion=Europe&pSubRegion=Southern%20Europe")
-    
+
 
     this.setState({
       country: country.data.Response
@@ -23,12 +24,14 @@ class SouthernEurope extends Component {
 
   render() {
     return (
-      <div>
+      <div className="center">
         {this.state.country.map(country =>
-          <Link to={`/country/${country.Name}`}>
-            <div key={country.Name}>
-              <h2>{country.Name}</h2>
-              <img src={country.FlagPng} alt="Country" width="200px" />
+          <Link to={`/country/${country.Name}`} key={country.Name}>
+            <div className="boxName" >
+              <h2 className="country">{country.Name}</h2>
+              <div className="flag">
+                <img src={country.FlagPng} alt="Country" width="200px" />
+              </div>
             </div>
           </Link>
         )}

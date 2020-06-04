@@ -1,0 +1,39 @@
+.main{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 2em;
+  border-radius: 15px;
+  /* width: 40%; */
+}
+
+.infoArea{
+  border: 2px solid blue;
+  border-radius: 15px;
+  margin-top:2em;
+
+}
+
+.nativeName{
+  margin-top: 1px;
+  margin-bottom: 1em;
+}
+
+.long{
+  margin-bottom: 1em;
+}
+
+.flagPng img{
+  border: 10px solid rgb(243, 220, 187);
+}
+
+/* .flagPng{
+  display: flex;
+  justify-content: center;
+  width:45%;
+  background-color: blanchedalmond;
+  margin: 1em;
+  margin-left: 20em;
+}
+  /* width: 20%; */
