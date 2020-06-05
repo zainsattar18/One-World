@@ -9,10 +9,16 @@
 }
 
 .infoArea{
-  border: 2px solid blue;
+  border: 3px solid #804200;
   border-radius: 15px;
   margin-top:2em;
+  font-family: 'ABeeZee', sans-serif;
+  background-color: rgba(181, 226, 235, .5);
+  color: #1C5D80;
+}
 
+.name{
+  margin-top: 1em;
 }
 
 .nativeName{
@@ -28,12 +34,11 @@
   border: 10px solid rgb(243, 220, 187);
 }
 
-/* .flagPng{
-  display: flex;
-  justify-content: center;
-  width:45%;
-  background-color: blanchedalmond;
-  margin: 1em;
-  margin-left: 20em;
+
+.lat:after{
+  content: "\00B0"
 }
-  /* width: 20%; */
+
+.long:after{
+  content: "\00B0"
+}
