@@ -1,5 +1,3 @@
-
-
 .subRegion{
   display: flex;
   justify-content: center;
@@ -21,7 +19,7 @@
 }
 
 button{
-color: #494949 !important;
+color: #494949;
 text-transform: uppercase;
 text-decoration: none;
 background: rgba(255, 72, 0, 0.117);
@@ -41,4 +39,14 @@ button :hover {
 
 .name{
 font-size: 20px;
+text-align: center;
+}
+
+
+@media screen and (max-width:450px){
+  .sub {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }

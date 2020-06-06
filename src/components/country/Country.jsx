@@ -16,7 +16,7 @@ function Country(props) {
         <div className="main">
           <div className="flagPng"><img src={info.FlagPng} alt={info.Name} width="300px" /></div>
           <div className="infoArea">
-            <div className="name"><strong>Country:</strong> {info.Name}</div>
+            <div className="nameCountry"><strong>Country:</strong> {info.Name}</div>
             <div className="nativeName"><strong>Native Name:</strong> {info.NativeName}</div>
             <div className="currency">Currency: {info.CurrencyName}</div>
             <div className="symbol">Currency Symbol: {info.CurrencySymbol}</div>

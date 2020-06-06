@@ -18,18 +18,28 @@ const Button = styled.button`
 background:orange;
 color:blue;
 height:40px;
+margin-right:10%;
+margin-top:2em;
+
+@media screen and (max-width:450px){
+  margin-right:10%;
+  margin-top:40%;
+}
 `;
 
 const Word = styled.div`
 
-font-size:100%;
+font-size:25px;
 color:white;
 margin:20px;
 font-weight:bold;
 margin-left:0px;
 margin-right:45px;
 padding-top:17px;
-
+@media screen and (max-width:450px){
+  font-size: 100%;
+  
+}
 
 `
 

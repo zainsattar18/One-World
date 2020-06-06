@@ -16,8 +16,13 @@ export default function Footer() {
   color:white;
   font-weight:bold;
   padding-top:1%;
+  padding-bottom:1%;
   padding-left:10px;
-  font-size:75%;
+  font-size:15px;
+  @media screen and (max-width: 450px){
+    font-size:25%;
+  }
+
   `
 
   const Thanks = styled.div`
@@ -25,9 +30,12 @@ export default function Footer() {
   flex-direction:row;
   justify-content:center;
   color:#D3E2EB;
-  font-size:60%;
+  font-size:15px;
   padding-top:1%;
   font-family: 'Dancing Script', cursive;
+  @media screen and (max-width: 450px){
+    font-size:35%
+  }
   `
 
   return (
