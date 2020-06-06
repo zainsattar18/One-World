@@ -2,6 +2,10 @@
 
 Title: One World 
 
+Deployed Website:
+
+https://adoring-goldstine-db6ebd.netlify.app/
+
 #2:
 
 Description:
@@ -34,15 +38,14 @@ Component Heirarchy:
 ```src-
       -App
         -Header
+          -Image (gif)
         -Body
-          -button
           -continent
               -Africa
                 -Eastern Africa
                   -countries
                     -country name
                     -country data
-                    -button
                 -Middle Africa
                   -countries 
                 -Northern Africa
@@ -65,11 +68,11 @@ Component Heirarchy:
 
 |  Component   |    Type    | State | Props | Description                                                      |
 | :----------: | :--------: | :---: | :---: | :--------------------------------------------------------------- |
-|    Header    | functional |   n   |   n   |   contain link to homepage                   |
-|     Body     |   class    |   y   |   n   |   provide links to the child components                          |
-|   Continent  | functional |   n   |   y   |   will render all the continents for user to click               |
+|    Header    | functional |   n   |   n   |   contain link to homepage      |
+|     HomePage |   class    |   y   |   n   |   provide links to the child components |                        |
+|   Continent  |    class   |   y   |   n   |   will render all the continents for user to click |
 |   Subregion  | functional |   n   |   y   |   will the subregion of in the clicked continent                 |
-|   Countries  | functional |   n   |   y   |   will render all the countries in the clicked subregion         |
+|   Countries  |    class   |   y   |   n   |   will render all the countries in the clicked subregion         |
 |   Country    | functional |   n   |   y   |   render information of the clicked continent                    |
 |    Footer    | functional |   n   |   n   |   will link to personal account                                  |
 
@@ -130,21 +133,53 @@ https://www.docdroid.net/JvMKKiY/swot-project-2-pdf
 
 |     Library      | Description                                        |
 | :--------------: | :--------------------------------------------------|
-|   React Router   | Connect and keep UI in sync with URL 
-|    Storybook     | Develop components in isolation for use in project |
+|   React Router   | Connect and keep UI in sync with URL               |
 |     Axios        | Help us make requests to external resources        |
 
 10:
 | Component | Priority | Estimated Time | Time Invested | 
 | --- | :---: |  :---: | :---: |  
-| Psuedocode| M | 2hrs|  |  
-| Create Parent component| H | 3hrs  | |
-| Create Child components | H | 4.5hrs|  |  
-| Data from API | H | 2hrs|  | 
-| CSS - Basic | M | 3hrs| | 
-| FlexBox| H | 4hrs|  |  
-| CSS - Advanced | H | 3 hrs |  |   
-| Work with Storybook  | H | 4.5hrs|  |  
-| Proper utilization of React-Router| H | 3.5hrs|  | 
+| Psuedocode| M | 2hrs| 2hrs |  
+| Create Parent component| H | 3hrs  | 3.5hrs |
+| Create Child components | H | 4.5hrs| 5.5hrs |  
+| Data from API | H | 2hrs| 3hrs | 
+| CSS - Basic | M | 3hrs| 3.5hrs | 
+| FlexBox| H | 4hrs| 3hrs |  
+| CSS - Advanced | H | 3 hrs | 3.5hrs |   
+| Work with Storybook  | H | 4.5hrs| 2.5hrs |  
+| Proper utilization of React-Router| H | 3.5hrs| 4.5hrs | 
 | --- | --- |  --- | --- |
-| Total | H |29.5hrs|  |  
+| Total | H |29.5hrs| 31hrs |  
+
+
+Code Showcase:
+
+```
+function Country(props) {
+  const info = props.data.find((country) => country.Name === props.match.params.Name)
+ 
+
+  return (
+    <div>
+      {info && <div key={info.Name}>
+
+        <div className="main">
+          <div className="flagPng"><img src={info.FlagPng} alt={info.Name} width="300px" /></div>
+          <div className="infoArea">
+            <div className="nameCountry"><strong>Country:</strong> {info.Name}</div>
+            <div className="nativeName"><strong>Native Name:</strong> {info.NativeName}</div>
+            <div className="currency">Currency: {info.CurrencyName}</div>
+            <div className="symbol">Currency Symbol: {info.CurrencySymbol}</div>
+            <div className="lat">Latitude: {info.Latitude}</div>
+            <div className="long">Longitude: {info.Longitude}</div>
+          </div>
+        </div>
+```
+
+Code Issues & Resolutions:
+
+I initially had issues trying to shorten the API data into smaller portions. Instead of grabbing just seven continents, it would give me a list of continents of all 250 nations. I was able to connect the data from the continents all the way to an individual nation (using react router) but eventually realized I had to hard code some information in order to properly use state/props to retrieve the right info. Once I was able to do it was smooth sailing until the styling portion.
+
+
+Styling is just naturally hard for me and it took some time but I feel like I made tremendous strides with Flexbox & media-queries with P2. 
+
