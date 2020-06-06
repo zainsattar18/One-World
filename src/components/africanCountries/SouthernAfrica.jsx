@@ -7,17 +7,17 @@ class SouthernAfrica extends Component {
   constructor() {
     super();
     this.state = {
-      country:[]
+      country: []
     }
   }
 
   async componentDidMount() {
     const country = await axios("https://cors-anywhere.herokuapp.com/http://countryapi.gear.host/v1/Country/getCountries?pRegion=Africa&pSubRegion=Southern%20Africa")
-    
-    
+
+
     this.setState({
       country: country.data.Response
-      
+
     })
 
   }
@@ -25,22 +25,21 @@ class SouthernAfrica extends Component {
 
   render() {
     return (
-      <div  className="center">
+      <div className="center">
         {this.state.country.map(country =>
           <Link to={`/country/${country.Name}`} key={country.Name}>
             <div className="boxName" >
               <h2 className="country">{country.Name} </h2>
               <div className="flag">
                 <img src={country.FlagPng} alt="Country" width="200px" />
-                </div>    
+              </div>
             </div>
-            </Link>
+          </Link>
         )}
-            
-        
+
       </div>
     )
   }
 }
 
-export default withRouter (SouthernAfrica)
+export default withRouter(SouthernAfrica)

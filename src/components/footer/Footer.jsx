@@ -44,10 +44,9 @@ export default function Footer() {
         <Name>
           <span dangerouslySetInnerHTML={{ "__html": "&copy;" }} /> Zain Sattar 2020 </Name>
         <Thanks>Special Thanks to CountryApi
-        {/* <img src="https://imgur.com/MGEKTOf" alt="CountryApi"/> */}
          </Thanks>
-          <img src="https://blog.agood.cloud/img/common/github.png" alt="Github" width="4%" height="4%" />
-          
+        <img src="https://blog.agood.cloud/img/common/github.png" alt="Github" width="4%" height="4%" />
+
 
       </Container>
 

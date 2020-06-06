@@ -43,8 +43,6 @@ padding-top:17px;
 
 `
 
-
-
 export default function Header() {
   return (
     <Container>

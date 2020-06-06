@@ -35,7 +35,6 @@ class Antarctica extends Component {
           </Link>
         )}
 
-
       </div>
     )
   }

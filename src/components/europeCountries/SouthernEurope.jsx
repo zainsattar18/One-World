@@ -36,7 +36,6 @@ class SouthernEurope extends Component {
           </Link>
         )}
 
-
       </div>
     )
   }

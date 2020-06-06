@@ -36,7 +36,6 @@ class CentralAsia extends Component {
           </Link>
         )}
 
-
       </div>
     )
   }

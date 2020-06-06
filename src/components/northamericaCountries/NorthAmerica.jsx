@@ -36,7 +36,6 @@ class NorthAmerica extends Component {
           </Link>
         )}
 
-
       </div>
     )
   }

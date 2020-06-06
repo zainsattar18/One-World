@@ -36,7 +36,6 @@ class Caribbean extends Component {
           </Link>
         )}
 
-
       </div>
     )
   }

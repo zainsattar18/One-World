@@ -3,10 +3,7 @@ import { withRouter } from 'react-router-dom'
 import "../css/Country.css"
 
 function Country(props) {
-  // console.log(props.data)
   const info = props.data.find((country) => country.Name === props.match.params.Name)
-  // console.log(info)
-
  
 
   return (

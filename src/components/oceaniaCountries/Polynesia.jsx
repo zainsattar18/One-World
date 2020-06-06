@@ -36,7 +36,6 @@ class Polynesia extends Component {
           </Link>
         )}
 
-
       </div>
     )
   }

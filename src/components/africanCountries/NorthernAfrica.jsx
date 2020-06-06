@@ -37,7 +37,6 @@ class NorthernAfrica extends Component {
           </Link>
         )}
 
-
       </div>
     )
   }

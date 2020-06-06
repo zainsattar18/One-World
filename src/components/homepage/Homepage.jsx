@@ -89,12 +89,7 @@ export default class homepage extends Component {
             <Country data={this.state.country} />
           </Route>
 
-
-
         </div>
-
-
-
 
       </div>
     )

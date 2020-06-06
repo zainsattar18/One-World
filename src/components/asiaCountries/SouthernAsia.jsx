@@ -12,7 +12,7 @@ class SouthernAsia extends Component {
   }
   async componentDidMount() {
     const country = await axios("https://cors-anywhere.herokuapp.com/http://countryapi.gear.host/v1/Country/getCountries?pRegion=Asia&pSubRegion=Southern%20Asia")
-    
+
 
     this.setState({
       country: country.data.Response
@@ -31,11 +31,10 @@ class SouthernAsia extends Component {
               <h2 className="country">{country.Name}</h2>
               <div className="flag">
                 <img src={country.FlagPng} alt="Country" width="200px" />
-                </div>
+              </div>
             </div>
           </Link>
         )}
-
 
       </div>
     )

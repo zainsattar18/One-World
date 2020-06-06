@@ -7,17 +7,17 @@ class EasternAfrica extends Component {
   constructor() {
     super();
     this.state = {
-      country:[]
+      country: []
     }
   }
 
   async componentDidMount() {
     const country = await axios("https://cors-anywhere.herokuapp.com/http://countryapi.gear.host/v1/Country/getCountries?pRegion=Africa&pSubRegion=Eastern%20Africa")
-    
-    
+
+
     this.setState({
       country: country.data.Response
-      
+
     })
 
   }
@@ -31,16 +31,16 @@ class EasternAfrica extends Component {
             <div className="boxName" >
               <h2 className="country">{country.Name} </h2>
               <div className="flag">
-                <img src={country.FlagPng} alt="Country" width="200px" />     
-                </div>    
+                <img src={country.FlagPng} alt="Country" width="200px" />
+              </div>
             </div>
-            </Link>
+          </Link>
         )}
-            
-        
+
+
       </div>
     )
   }
 }
 
-export default withRouter (EasternAfrica)
+export default withRouter(EasternAfrica)

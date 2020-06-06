@@ -36,7 +36,6 @@ class Micronesia extends Component {
           </Link>
         )}
 
-
       </div>
     )
   }

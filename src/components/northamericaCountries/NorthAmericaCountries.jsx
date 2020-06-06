@@ -14,7 +14,6 @@ function NorthAmericaCountries() {
         <Caribbean />
       </Route>
 
-      
     </div>
   )
 }

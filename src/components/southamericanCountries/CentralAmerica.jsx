@@ -26,7 +26,7 @@ class CentralAmerica extends Component {
     return (
       <div className="center">
         {this.state.country.map(country =>
-          <Link to={`/country/${country.Name}`}key={country.Name}>
+          <Link to={`/country/${country.Name}`} key={country.Name}>
             <div className="boxName" >
               <h2 className="country">{country.Name}</h2>
               <div className="flag">
@@ -35,7 +35,6 @@ class CentralAmerica extends Component {
             </div>
           </Link>
         )}
-
 
       </div>
     )

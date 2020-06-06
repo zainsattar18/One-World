@@ -12,7 +12,7 @@ class Melanesia extends Component {
   }
   async componentDidMount() {
     const country = await axios("https://cors-anywhere.herokuapp.com/http://countryapi.gear.host/v1/Country/getCountries?pRegion=Oceania&pSubRegion=Melanesia")
-    
+
 
     this.setState({
       country: country.data.Response
@@ -27,15 +27,14 @@ class Melanesia extends Component {
       <div className="center">
         {this.state.country.map(country =>
           <Link to={`/country/${country.Name}`} key={country.Name}>
-            <div  className="boxName" >
+            <div className="boxName" >
               <h2 className="country">{country.Name}</h2>
               <div className="flag">
                 <img src={country.FlagPng} alt="Country" width="200px" />
-                </div>
+              </div>
             </div>
           </Link>
         )}
-
 
       </div>
     )

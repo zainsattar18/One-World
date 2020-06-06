@@ -12,7 +12,7 @@ class EasternEurope extends Component {
   }
   async componentDidMount() {
     const country = await axios("https://cors-anywhere.herokuapp.com/http://countryapi.gear.host/v1/Country/getCountries?pRegion=Europe&pSubRegion=Eastern%20Europe")
-    
+
 
     this.setState({
       country: country.data.Response
@@ -24,7 +24,7 @@ class EasternEurope extends Component {
 
   render() {
     return (
-      <div className= "center">
+      <div className="center">
         {this.state.country.map(country =>
           <Link to={`/country/${country.Name}`} key={country.Name}>
             <div className="boxName" >
@@ -35,7 +35,6 @@ class EasternEurope extends Component {
             </div>
           </Link>
         )}
-
 
       </div>
     )
