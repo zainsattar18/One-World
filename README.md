@@ -10,7 +10,7 @@ https://adoring-goldstine-db6ebd.netlify.app/
 
 Description:
 
-I am creating a React app that allows the user to retrieve relevant information about a certain country of their choosing. The main homepage will have the Seven Continents. After clicked it will send the user to 2nd page which displays the sub-region and allow the user to eventually traverse to endpoint which displays several different datapoints of a country (Name, Latitude & Longitude, etc).
+I am creating a React app that allows the user to retrieve relevant information about a certain country of their choosing. The main homepage will have the Seven Continents. After clicked it will send the user to 2nd page which displays the sub-region and allow the user to eventually traverse to endpoint which displays several different data-points of a country (Name, Latitude & Longitude, etc).
 
 #3:
 
@@ -33,7 +33,7 @@ https://wireframe.cc/pro/pp/da2767ce7347254
 
 #4:
 
-Component Heirarchy: 
+Component Hierarchy: 
 
 ```src-
       -App
